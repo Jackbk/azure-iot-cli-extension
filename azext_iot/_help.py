@@ -307,7 +307,7 @@ helps[
     - name: Patch device twin tags.
       text: >
         az iot hub device-twin update -n {iothub_name} -d {device_id}
-        --tags '{"country": "USA"}}'
+        --tags '{"country": "USA"}'
     - name: Patch removal of 'critical' desired property from parent 'temperature'
       text: >
         az iot hub device-twin update -n {iothub_name} -d {device_id}
@@ -413,7 +413,7 @@ helps[
     - name: Patch module twin tags.
       text: >
         az iot hub module-twin update -n {iothub_name} -d {device_id} -m {module_id}
-        --tags '{"country": "USA"}}'
+        --tags '{"country": "USA"}'
     - name: Patch removal of 'critical' desired property from parent 'temperature'
       text: >
         az iot hub module-twin update -n {iothub_name} -d {device_id} -m {module_id}
@@ -1245,6 +1245,17 @@ helps[
     - name: Will randomly convert a recieved message into an error so you can see what sample errors might look like.
       text: >
         az iot central app validate-messages --app-id {app_id} --simulate-errors
+  """
+
+helps[
+    "iot central app capability-model show"
+] = """
+    type: command
+    short-summary: Get the device model from IoT central.
+    examples:
+    - name: Basic usage
+      text: >
+        az iot central app capability-model show --app-id {app_id} -d {device_id}
   """
 
 helps[
